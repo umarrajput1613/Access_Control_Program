@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Access Control Program</title>
+    <script>
+        let role = prompt("Enter your role (Admin/Manager/Employee/Intern):").toLowerCase();
+        let experience = parseFloat(prompt("Enter your years of experience:"));
+        let department = prompt("Enter your department (IT/HR/Others):").toLowerCase();
+
+        // Access control logic (without function)
+        if (role === "admin") {
+            console.log("Access Granted");
+        } else if (role === "manager" && experience >= 2 ) {
+            console.log("Access Granted");
+        } else if (role === "employee" && experience > 3 && (department === "it" || department === "hr")) {
+            console.log("Access Granted");
+        } else {
+            console.log("Access Denied");
+            alert("Access Denied! This page will now close.");
+            window.close(); // sir yeh is liyeh usekia he take access granted nahoto page close ho jaye sorry sir bus thori functionalty ke liyeh usekia
+            
+        }
+    </script>
+</head>
+<body><center>
+    <h1 style="color:blue; font-family:Chettalbury Italic; font-weight: bolder; font-size: 100px; line-height: 120px;">Welcome to the Access Control Page Sir</h1>
+    <p style="color:brown; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 30px; font-weight: 400;">If you see this message, you have been <em><strong>granted access</strong></em>.</p>
+    </center>
+</body>
+</html>
